@@ -1,1 +1,1 @@
-# Tesis-Memristores-Rozemberg
+# Tesis-Memristores-Rozenberg
