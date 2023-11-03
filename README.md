@@ -1,6 +1,7 @@
 # Tesis-Memristores-Rozenberg
 Todos los archivos tienen formato .ipynb  
-Descargar todos los archivos y alojar en un mismo directorio.
+Descargar todos los archivos y alojar en un mismo directorio.  
+Para mas detalles operativos en la ejecucion del programa consultar archivo "Instrucciones.pdf"
 
 ## Programas:
 
@@ -19,8 +20,8 @@ Función memristor individual. Permite calcular la variación de resistencia de 
 Este programa realiza un análisis y reestructura los datos previamente exportados. Exporta diversos gráficos y el archivo Remnant-resistance-state.csv, donde guarda el valor de la resistencia remanente de la red (es decir la resistencia de la red en aquellos puntos donde la tensión aplicada a la red es nula). Este archivo es necesario para poder graficar los mapas de calor utilizando Maps_VEOV_v2. 
 
 ### Maps_VEOV_v2.ipynb
-Este programa grafica los estados de resistencia remanente (resistencia eléctrica cuando la señal externa de la red es cero) para cada memristor individual de la red como un mapa de calor. Este programa requiere el archivo "states.csv" para graficar los mapas.  
-Para poder ejecturar Maps_VEOV_v2.ipynb, se debe crear en el directorio una carpeta llamada /simulations_n/. En esa carpeta se debe copiar el archivo “states.csv” del experimento que se desee graficar, y también dentro de la carpet /simulations_n/ debe crearse una subcarpeta /fig/ donde se guardaran los mapas creados. Una vez hecho esto, se puede ejecutar el programa.  
+Este programa grafica los estados de resistencia remanente (resistencia eléctrica cuando la señal externa de la red es cero) para cada memristor individual de la red como un mapa de calor. Este programa requiere el archivo "states.csv" para graficar los mapas.   
+Para poder ejecturar Maps_VEOV_v2.ipynb, se debe crear en el directorio una carpeta llamada /simulations_n/. En esa carpeta se debe copiar el archivo “states.csv” del experimento que se desee graficar, y también dentro de la carpeta /simulations_n/ debe crearse una subcarpeta /fig/ donde se guardaran los mapas creados. Una vez hecho esto, se puede ejecutar el programa.  
 
 
 ## Instalacion de PySPICE para Anaconda 3 en Windows:
