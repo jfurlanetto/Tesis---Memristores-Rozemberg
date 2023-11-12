@@ -1,6 +1,21 @@
-# Tesis-Memristores-Rozenberg
-Todos los archivos tienen formato .ipynb  
-Descargar todos los archivos y alojar en un mismo directorio.  
+# Tesis-Modelo VEOV
+Este repositorio forma parte de un trabajo de tesis de maestria enfocado en el estudio de redes neuronales artificiales mediante el Modelo VEOV (Voltage Enhanced Oxygen Vacancies).  
+El uso intensivo de redes neuronales artificiales está posibilitando un impresionante desarrollo en muchas áreas de la ciencia y la tecnología, principalmente por su aplicación
+en técnicas de aprendizaje automático y, más generalmente, de inteligencia artificial. Estas redes son abstracciones matemáticas con una fuerte inspiración biológica, implementadas
+en códigos ejecutados sobre dispositivos electrónicos usuales (software). Una estrategia alternativa, en exploración desde hace pocos años, es que la red pueda estar codificada en
+el mismo dispositivo (hardware), lo que redundaría tanto en la optimización del consumo eléctrico como en la posibilidad de permitir formas alternativas de cálculo y procesamiento
+de información. Este enfoque incluye por sí mismo una característica distintiva de los tejidos neuronales biológicos: la conformación de intrincadas redes de componentes, sencillos e
+imperfectos, con un altísimo grado de interconexión. Un ejemplo de estos sistemas son las redes de nanohilos metálicos. Ellos son generalmente autoensamblados de nanohilos de
+plata, de algunas decenas de micrones de longitud y centenas de nanómetros de diámetro, cuyas intersecciones, mediadas por el recubrimiento de óxido o el polímero usado en su
+fabricación, serían el equivalente a las sinapsis en los tejidos neuronales mencionados. En este trabajo exploramos numérico-computacionalmente las propiedades de transporte
+eléctrico de una red de nanohilos, comparándolas con sistemas experimentales reales. Se analizan de manera detallada varios modelos del contacto entre los nanohilos (interfaces),
+en particular aquellos con propiedades memristivas. Asimismo, se estudia el efecto de condiciones ambientales, como humedad y temperatura, en su funcionamiento y se evalúa
+el impacto de la conectividad en sus propiedades eléctricas. Los resultados indican que más allá de las propiedades individuales de las interfaces, el grado de conectividad y la topología
+de la red condicionan la respuesta eléctrica obtenida y permiten delinear recomendaciones para el diseño de un protocolo de caracterización eléctrica de los sistemas experimentales
+asociados.
+
+Todos los archivos del repositorio poseen formato .ipynb  
+Todos los archivos deben ser descargados y alojados en un mismo directorio.  
 Para mas detalles operativos en la ejecucion del programa consultar archivo "Instrucciones.pdf"
 
 ## Programas:
