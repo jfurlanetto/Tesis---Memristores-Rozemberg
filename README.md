@@ -1,50 +1,35 @@
-# Tesis-Modelo VEOV
-Este repositorio forma parte de un trabajo de tesis de maestria enfocado en el estudio de redes neuronales artificiales mediante el Modelo VEOV (Voltage Enhanced Oxygen Vacancies).  
-El uso intensivo de redes neuronales artificiales está posibilitando un impresionante desarrollo en muchas áreas de la ciencia y la tecnología, principalmente por su aplicación
-en técnicas de aprendizaje automático y, más generalmente, de inteligencia artificial. Estas redes son abstracciones matemáticas con una fuerte inspiración biológica, implementadas
-en códigos ejecutados sobre dispositivos electrónicos usuales (software). Una estrategia alternativa, en exploración desde hace pocos años, es que la red pueda estar codificada en
-el mismo dispositivo (hardware), lo que redundaría tanto en la optimización del consumo eléctrico como en la posibilidad de permitir formas alternativas de cálculo y procesamiento
-de información. Este enfoque incluye por sí mismo una característica distintiva de los tejidos neuronales biológicos: la conformación de intrincadas redes de componentes, sencillos e
-imperfectos, con un altísimo grado de interconexión. Un ejemplo de estos sistemas son las redes de nanohilos metálicos. Ellos son generalmente autoensamblados de nanohilos de
-plata, de algunas decenas de micrones de longitud y centenas de nanómetros de diámetro, cuyas intersecciones, mediadas por el recubrimiento de óxido o el polímero usado en su
-fabricación, serían el equivalente a las sinapsis en los tejidos neuronales mencionados. En este trabajo exploramos numérico-computacionalmente las propiedades de transporte
-eléctrico de una red de nanohilos, comparándolas con sistemas experimentales reales. Se analizan de manera detallada varios modelos del contacto entre los nanohilos (interfaces),
-en particular aquellos con propiedades memristivas. Asimismo, se estudia el efecto de condiciones ambientales, como humedad y temperatura, en su funcionamiento y se evalúa
-el impacto de la conectividad en sus propiedades eléctricas. Los resultados indican que más allá de las propiedades individuales de las interfaces, el grado de conectividad y la topología
-de la red condicionan la respuesta eléctrica obtenida y permiten delinear recomendaciones para el diseño de un protocolo de caracterización eléctrica de los sistemas experimentales
-asociados.
+# Thesis- VEOV Model
+This repository is part of a master thesis work focused on the study of artificial neural networks using the VEOV (Voltage Enhanced Oxygen Vacancies) Model.  
+The intensive use of artificial neural networks is enabling an impressive development in many areas of science and technology, mainly because of its application in machine learning techniques and, more generally, in artificial intelligence. These networks are mathematical abstractions with a strong biological inspiration, implemented in codes executed on electronic devices used implemented in codes executed on common electronic devices (software). An alternative strategy, which has been under exploration for a few years, is that the network can be coded in the same device (hardware), which would result in both the optimization of power consumption and the possibility of allowing alternative forms of calculation and information processing. of information. This approach itself includes a distinctive feature of biological neural tissues: the formation of intricate networks of components, simple and imperfect, with a very high degree of interconnection. An example of such systems are networks of metallic nanowires. They are usually self-assemblies of silver nanowires, a few tens of microns in size.
+The intersections of these nanowires, mediated by the oxide coating or the polymer used in their fabrication, would be the equivalent of synapses in the aforementioned neuronal tissues. In this work we explore numerically-computationally the electrical transport properties of a nanowire network, comparing them with real experimental systems. Several models of the contact between nanowires (interfaces), particularly those with memristive properties, are analyzed in detail. The effect of environmental conditions, such as humidity and temperature, on their performance is also studied and the impact of connectivity on their electrical properties is evaluated. The results indicate that beyond the individual properties of the interfaces, the degree of connectivity and the topology of the network condition the electrical response obtained and allow us to outline recommendations for the design of a protocol for the electrical characterization of the associated experimental systems.
+All files in the repository are in .ipynb format.  
+All files must be downloaded and placed in the same directory.  
+For more operational details on running the program see file "Instructions.pdf".
 
-Todos los archivos del repositorio poseen formato .ipynb  
-Todos los archivos deben ser descargados y alojados en un mismo directorio.  
-Para mas detalles operativos en la ejecucion del programa consultar archivo "Instrucciones.pdf"
-
-## Programas:
-
-### Modelo de Rozenberg 5.6i Pyspice.ipynb
-Main program: Define los parámetros de los memristores, crea los arreglos espaciales y la señal eléctrica aplicada y resuelve la red durante el ciclo del experimento llamando a las funciones Memristorfunction y PySpicefunction. Exporta los resultados del experimento en una carpeta dentro del directorio (gráfico y archivos csv)  
-- tVI.csv exporta el numero de step del experimento (t), el voltaje (V) y la corriente total (I)  
-- states.csv exporta para cada step del experimento (t) los valores de resistencia eléctrica de cada memristor que compone la red.  
+## Programs:
+### Rozenberg Model 5.6i Pyspice.ipynb.
+Main program: Defines the memristor parameters, creates the spatial arrays and the applied electrical signal and solves the network during the experiment cycle by calling the Memristorfunction and PySpicefunction functions. Exports the results of the experiment in a folder inside the directory (graphs and csv files).  
+- tVI.csv exports the step number of the experiment (t), the voltage (V) and the total current (I)  
+- states.csv exports for each step of the experiment (t) the electrical resistance values of each memristor composing the network.  
 
 ### PySpicefunction.ipynb
-Función pyspice: calcula la caída de tensión en cada nodo de la red de memristores utilizando NGSPICE.
+Pyspice function: calculates the voltage drop at each node of the memristor network using NGSPICE.
 
 ### Memristorfunction.ipynb
-Función memristor individual. Permite calcular la variación de resistencia de cada memristor individual y la migración de vacancias por cada estimulo aplicado. Requiere como imput la diferencia de potencial en cada memristor, que se calcula mediante PySpicefunction.ipynb
+Individual memristor function. Allows to calculate the resistance variation of each individual memristor and the gap migration for each applied stimulus. It requires as imput the potential difference in each memristor, which is calculated by PySpicefunction.ipynb.
 
 ### Analyzing-memristive-arrays_VEOV.ipynb
-Este programa realiza un análisis y reestructura los datos previamente exportados. Exporta diversos gráficos y el archivo Remnant-resistance-state.csv, donde guarda el valor de la resistencia remanente de la red (es decir la resistencia de la red en aquellos puntos donde la tensión aplicada a la red es nula). Este archivo es necesario para poder graficar los mapas de calor utilizando Maps_VEOV_v2. 
+This program performs an analysis and restructures the previously exported data. It exports several graphs and the file Remnant-resistance-state.csv, where it saves the value of the remaining resistance of the network (i.e. the resistance of the network at those points where the voltage applied to the network is zero). This file is necessary to be able to plot the heat maps using Maps_VEOV_v2. 
 
 ### Maps_VEOV_v2.ipynb
-Este programa grafica los estados de resistencia remanente (resistencia eléctrica cuando la señal externa de la red es cero) para cada memristor individual de la red como un mapa de calor. Este programa requiere el archivo "states.csv" para graficar los mapas.   
-Para poder ejecturar Maps_VEOV_v2.ipynb, se debe crear en el directorio una carpeta llamada /simulations_n/. En esa carpeta se debe copiar el archivo “states.csv” del experimento que se desee graficar, y también dentro de la carpeta /simulations_n/ debe crearse una subcarpeta /fig/ donde se guardaran los mapas creados. Una vez hecho esto, se puede ejecutar el programa.  
+This program plots the remaining resistance states (electrical resistance when the external grid signal is zero) for each individual memristor in the grid as a heat map. This program requires the "states.csv" file to plot the maps.   
+In order to run Maps_VEOV_v2.ipynb, a folder called /simulations_n/ must be created in the directory. In this folder the "states.csv" file of the experiment to be plotted must be copied, and also inside the /simulations_n/ folder a subfolder /fig/ must be created where the created maps will be saved. Once this is done, you can run the program.  
 
+## Installation of PySPICE for Anaconda 3 on Windows:
+To connect a Python code with SPICE open source (the NG is one of them) we use the PySPICE tool.
+To install it, start Anaconda 3, open a console (Jupyter QtConsole) and execute the following command:   
 
-## Instalacion de PySPICE para Anaconda 3 en Windows:
+*conda install -c conda-forge pyspice*.  
 
-Para conectar un código en Python con SPICE open source (el NG es uno de ellos) empleamos la herramienta PySPICE.  
-Para instalarla, se debe iniciar Anaconda 3, abrir una consola (Jupyter QtConsole) y ejecutar la siguiente instrucción:   
-
-*conda install -c conda-forge pyspice*  
-
-Con esta instruccion se instalan tanto PySPICE como el propio motor de simulación NGSPICE
+With this instruction both PySPICE and the NGSPICE simulation engine itself are installed.
 
